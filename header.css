@@ -6,9 +6,9 @@
 header {
 	height: 5em;
 	font-family: Dual, sans-serif;
-	background: linear-gradient(to right, #151515, grey);
-	background: -moz-linear-gradient(left, #151515, grey);
-	background: -webkit-linear-gradient(left, #151515, grey);
+	background: linear-gradient(to right, #151515, #333);
+	background: -moz-linear-gradient(left, #151515, #333);
+	background: -webkit-linear-gradient(left, #151515, #333);
 	color: white;
 	padding: 2em 1em;
 	text-align: justify;
@@ -71,28 +71,49 @@ header input[type=password]:focus {
 	box-shadow: 0 0 1em rgb(150, 200, 255);
 }
 
-header input[type=button],
-header input[type=submit] {
+header .login-form a {
 	border: none;
 	margin: none;
-	padding: 0 .2em;
+	padding: 0 .5em 0 1.5em;
 	background: transparent;
 	font-family: Dual;
 	font-size: 1em;
+	position: relative;
+	cursor: pointer;
 	transition: color .2s;
 }
 
-header input[type=button]:not(:last-child),
-header input[type=submit]:not(:last-child) {
+header .login-form a:not(:last-child) {
 	border-right: 1px dotted white;
 }
 
-header input[type=button]:hover,
-header input[type=submit]:hover {
+header .login-form a:hover {
 	color: #B59236;
 }
 
-header input[type=button]::before,
-header input[type=submit]::before {
+header .login-form a::before {
 	/* Arrow */
+    content: "";
+    display: block;
+    position: absolute;
+    top: .25em;
+	left: .25em;
+	border: solid;
+    border-color: white transparent;
+    border-width: 0 .4em .4em .4em;
+	transform: rotate(90deg);
+	transition: border .2s;
+    z-index: 99;
+}
+
+header .login-form a:hover::before {
+	border-color: #B59236 transparent;
+}
+
+/* ================== */
+/* == Header Utils == */
+/* ================== */
+
+header .header-utils a {
+	padding: 0 .5em;
 }

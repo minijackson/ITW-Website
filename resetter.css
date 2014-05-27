@@ -65,3 +65,13 @@ input[type=button],
 button {
 	color: inherit;
 }
+
+*::-moz-selection {
+	background: #B59236;
+	color: #000;
+}
+
+*::selection {
+	background: #B59236;
+	color: #000;
+}
