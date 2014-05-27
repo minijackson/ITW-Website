@@ -6,7 +6,10 @@
 header {
 	height: 5em;
 	font-family: Dual, sans-serif;
-	background: #999;
+	background: linear-gradient(to right, #151515, grey);
+	background: -moz-linear-gradient(left, #151515, grey);
+	background: -webkit-linear-gradient(left, #151515, grey);
+	color: white;
 	padding: 2em 1em;
 	text-align: justify;
 	letter-spacing: 1px;
@@ -52,13 +55,44 @@ header .login-form {
 	margin-right: 2em;
 }
 
-header input[type=text] {
+header input[type=text],
+header input[type=password] {
+	font-size: 1em;
+	width: 10em;
 	border: 1px solid grey;
 	padding: .5em;
 	border-radius: .3em;
+	font-family: Dual;
 	transition: box-shadow .3s;
 }
 
-header input[type=text]:focus {
+header input[type=text]:focus,
+header input[type=password]:focus {
 	box-shadow: 0 0 1em rgb(150, 200, 255);
+}
+
+header input[type=button],
+header input[type=submit] {
+	border: none;
+	margin: none;
+	padding: 0 .2em;
+	background: transparent;
+	font-family: Dual;
+	font-size: 1em;
+	transition: color .2s;
+}
+
+header input[type=button]:not(:last-child),
+header input[type=submit]:not(:last-child) {
+	border-right: 1px dotted white;
+}
+
+header input[type=button]:hover,
+header input[type=submit]:hover {
+	color: #B59236;
+}
+
+header input[type=button]::before,
+header input[type=submit]::before {
+	/* Arrow */
 }

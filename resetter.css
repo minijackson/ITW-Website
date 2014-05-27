@@ -21,7 +21,6 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	color: #000;
 	text-decoration: none;
 	vertical-align: baseline;
 }
@@ -31,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	font-size: 16px;
+	font-size: 10px;
 	line-height: 1;
 }
 ol, ul {
@@ -55,4 +54,14 @@ table {
 	src: url("fonts/Dual-300.ttf") format("truetype"),
 	     url("fonts/Dual-300.otf") format("opentype");
 	font-weight: 300;
+}
+
+a {
+	color: inherit;
+}
+
+input[type=submit],
+input[type=button],
+button {
+	color: inherit;
 }
