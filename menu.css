@@ -2,28 +2,82 @@ nav {
 	padding: 0 2em;
 	font-size: 1.5em;
 	font-family: Dual, sans-serif;
+	background: inherit;
 }
 
-nav > ul li {
+/* =============== */
+/* == Title bar == */
+/* =============== */
+
+nav > ul > li {
 	display: inline-block;
 	margin-right: 1em;
+	text-align: center;
 }
 
-nav > ul li:last-child {
+nav > ul > li:last-child {
 	margin-right: 0;
 }
 
-nav > ul li .submenu-title {
+nav > ul > li .submenu-title {
 	display: inline-block;
+
+	/* z-index works only withe relative absolute and fixed positionned elements 
+	position: relative;*/
+
 	padding: 1em 2em;
 	font-weight: bold;
 	transition: background .3s, color .3s;
+/*	z-index: 2;*/
 }
 
-nav > ul li .submenu-title:hover {
+nav > ul > li .submenu-title:hover,
+nav > ul > li .submenu:hover ~ .submenu-title {
 	background: white;
 }
 
-nav > ul li .submenu {
-	display: none;
+/* ============= */
+/* == Submenu == */
+/* ============= */
+
+nav > ul > li .submenu {
+	position: absolute;
+	overflow: hidden;
+	right: 0;
+	width: 100%;
+	padding: 2em;
+	transform: translateY(-100%);
+	transition: background .3s .1s, transform .3s .1s;
+	z-index: -1;
+}
+
+nav > ul > li .submenu-title:hover ~ .submenu,
+nav > ul > li .submenu:hover {
+	background: white;
+	transform: translateY(0%);
+}
+
+/* ============= */
+/* == Effects == */
+/* ============= */
+
+/*
+ * Header can't be affected directly by the opacity
+ * as he hide the submenu dropdown. Therefore the
+ * children oh the header are affected.
+ */
+
+body > :not(nav):not(header),
+body > header > * {
+	transition: opacity .3s;
+}
+
+body > :not(nav),
+body > header > * {
+	opacity: 1;
+}
+
+body > .faded:not(header),
+body > header.faded > * {
+	opacity: .2;
 }

@@ -7,13 +7,6 @@
 		<link rel="stylesheet" href="header.css">
 		<link rel="stylesheet" href="menu.css">
 		<link rel="stylesheet" href="style.css">
-
-		<!--
-
-			TODO: Menu flexbox
-			TODO: Modernizr for menu flexbox
-
-		-->
 	</head>
 	<body>
 
@@ -72,6 +65,21 @@
 				</li>
 			</ul>
 		</nav>
+
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("nav > ul > li .submenu-title").mouseenter(function() {
+					$("body > :not(nav)").addClass("faded");
+				});
+
+				$("nav > ul > li .submenu-title").mouseleave(function() {
+					$("body > :not(nav)").removeClass("faded");
+				});
+			});
+		</script>
 
 	</body>
 </html>

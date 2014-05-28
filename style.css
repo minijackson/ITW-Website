@@ -1,4 +1,5 @@
 body {
+	position: relative;
 	width: 980px;
 	margin: auto;
 	background: #151515;
