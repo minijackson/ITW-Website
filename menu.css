@@ -22,7 +22,7 @@ nav > ul > li:last-child {
 nav > ul > li .submenu-title {
 	display: inline-block;
 
-	/* z-index works only withe relative absolute and fixed positionned elements 
+	/* z-index works only withe relative absolute and fixed positionned elements
 	position: relative;*/
 
 	padding: 1em 2em;
@@ -79,5 +79,61 @@ body > header > * {
 
 body > .faded:not(header),
 body > header.faded > * {
+	opacity: .2;
+}
+
+/* ==================== */
+/* == Submenu images == */
+/* ==================== */
+
+nav .submenu-imgs li {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 20%;
+	margin: 1.25em;
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+nav .submenu-imgs li .caption,
+nav .submenu-imgs li img {
+	transition: transform .3s;
+}
+
+nav .submenu-imgs li img {
+	display: inline-block;
+	width: 100%;
+	margin: auto;
+	transform: translateY(0%);
+}
+
+nav .submenu-imgs li:hover img {
+	transform: translateY(-5%);
+}
+
+nav .submenu-imgs li .caption {
+	position: absolute;
+	color: white;
+	background: #444;
+	bottom: 0;
+	padding: 1em;
+	transform: translateY(100%);
+}
+
+nav .submenu-imgs li .caption::before {
+	top: 40%;
+	left: 10px;
+}
+
+nav .submenu-imgs li:hover .caption {
+	transform: translateY(0%);;
+}
+
+nav .submenu-imgs:hover li:hover {
+	opacity: 1;
+}
+
+nav .submenu-imgs:hover li {
 	opacity: .2;
 }

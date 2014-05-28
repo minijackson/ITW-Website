@@ -91,7 +91,8 @@ header .login-form a:hover {
 	color: #B59236;
 }
 
-header .login-form a::before {
+header .login-form a::before,
+nav .submenu-imgs li .caption::before {
 	/* Arrow */
     content: "";
     display: block;

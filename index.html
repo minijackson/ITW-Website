@@ -36,7 +36,24 @@
 				<li>
 					<a href="#" class="submenu-title">Produits</a>
 					<div class="submenu">
-						Lorem temporibus veniam dignissimos maxime quisquam beatae aperiam! Incidunt qui ad quos harum autem minima labore! Facere facere veniam culpa explicabo odio totam. Magni fuga nisi deleniti delectus labore quam?
+						<ul class="submenu-imgs">
+							<li class="submenu-img-item">
+								<img src="images/lorem.png" alt="lorem">
+								<div class="caption">Elit sit quis nobis aspernatur!</div>
+							</li>
+							<li class="submenu-img-item">
+								<img src="images/lorem.png" alt="lorem">
+								<div class="caption">Ipsum assumenda maiores vel distinctio!</div>
+							</li>
+							<li class="submenu-img-item">
+								<img src="images/lorem.png" alt="lorem">
+								<div class="caption">Consectetur impedit accusamus animi pariatur.</div>
+							</li>
+							<li class="submenu-img-item">
+								<img src="images/lorem.png" alt="lorem">
+								<div class="caption">Lorem nobis odit rerum accusamus.</div>
+							</li>
+						</ul>
 					</div>
 				</li>
 				<li>
@@ -71,12 +88,16 @@
 
 		<script>
 			$(document).ready(function() {
-				$("nav > ul > li .submenu-title").mouseenter(function() {
+				$("nav > ul > li .submenu-title, nav > ul > li .submenu").hover(function() {
 					$("body > :not(nav)").addClass("faded");
 				});
 
-				$("nav > ul > li .submenu-title").mouseleave(function() {
+				$("nav > ul > li .submenu-title, nav > ul > li .submenu").mouseleave(function() {
 					$("body > :not(nav)").removeClass("faded");
+				});
+
+				$("nav .submenu-imgs").mouseleave(function() {
+					$(this).children().removeClass("faded");
 				});
 			});
 		</script>
