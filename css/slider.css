@@ -9,7 +9,9 @@
 	width: 500%;
 	white-space: nowrap;
 	transform: translateX(0%);
+	-webkit-transform: translateX(0%);
 	transition: transform .7s;
+	-webkit-transition: -webkit-transform .7s;
 }
 
 .image-slider > ul > li {
@@ -17,6 +19,7 @@
 	float: left;
 	width: 20%;
 	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
 }
 
 .image-slider > ul > li > img {

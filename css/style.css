@@ -8,6 +8,7 @@ body {
 a {
 	color: white;
 	transition: color .2s;
+	-webkit-transition: color .2s;
 }
 
 a:hover {
