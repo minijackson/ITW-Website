@@ -1,7 +1,4 @@
-
-/* ====================== */
-/* == Header positions == */
-/* ====================== */
+/* Header positions {{{*/
 
 header {
 	height: 8em;
@@ -46,10 +43,8 @@ header h1 {
 	font-size: 3em;
 	display: inline-block;
 }
-
-/* ================== */
-/* == Header Forms == */
-/* ================== */
+/*}}}*/
+/* Header Forms {{{*/
 
 header .login-form {
 	margin-right: 2em;
@@ -111,10 +106,14 @@ header .login-form a:hover::before {
 	border-color: #B59236 transparent;
 }
 
-/* ================== */
-/* == Header Utils == */
-/* ================== */
+/*}}}*/
+/* Header Utils {{{*/
 
 header .header-utils a {
 	padding: 0 .5em;
 }
+
+/*}}}*/
+/*
+vim:fdm=marker
+*/

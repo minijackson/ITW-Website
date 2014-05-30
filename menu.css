@@ -1,13 +1,15 @@
 nav {
-	padding: 0 2em;
 	font-size: 1.5em;
 	font-family: Dual, sans-serif;
 	background: inherit;
 }
 
-/* =============== */
-/* == Title bar == */
-/* =============== */
+nav > ul {
+	background: inherit;
+	padding: 0 2em;
+}
+
+/* Title bar {{{*/
 
 nav > ul > li {
 	display: inline-block;
@@ -36,9 +38,8 @@ nav > ul > li .submenu:hover ~ .submenu-title {
 	background: white;
 }
 
-/* ============= */
-/* == Submenu == */
-/* ============= */
+/*}}}*/
+/* Submenu {{{*/
 
 nav > ul > li .submenu {
 	position: absolute;
@@ -57,9 +58,8 @@ nav > ul > li .submenu:hover {
 	transform: translateY(0%);
 }
 
-/* ============= */
-/* == Effects == */
-/* ============= */
+/*}}}*/
+/* Effects {{{*/
 
 /*
  * Header can't be affected directly by the opacity
@@ -82,9 +82,8 @@ body > header.faded > * {
 	opacity: .2;
 }
 
-/* ==================== */
-/* == Submenu images == */
-/* ==================== */
+/*}}}*/
+/* Submenu images {{{*/
 
 nav .submenu-imgs li {
 	display: inline-block;
@@ -109,7 +108,7 @@ nav .submenu-imgs li img {
 }
 
 nav .submenu-imgs li:hover img {
-	transform: translateY(-5%);
+	transform: translateY(-7%);
 }
 
 nav .submenu-imgs li .caption {
@@ -137,3 +136,9 @@ nav .submenu-imgs:hover li:hover {
 nav .submenu-imgs:hover li {
 	opacity: .2;
 }
+
+/*}}}*/
+
+/*
+vim:fdm=marker
+*/

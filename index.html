@@ -6,10 +6,12 @@
 		<link rel="stylesheet" href="resetter.css">
 		<link rel="stylesheet" href="header.css">
 		<link rel="stylesheet" href="menu.css">
+		<link rel="stylesheet" href="slider.css">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 
+<!-- Header {{{-->
 		<header>
 			<div class="header-title">
 				<i class="header-logo"></i>
@@ -30,7 +32,8 @@
 				</ul>
 			</div>
 		</header>
-
+<!--}}}-->
+		<!-- Navigation menu {{{-->
 		<nav>
 			<ul>
 				<li>
@@ -82,6 +85,25 @@
 				</li>
 			</ul>
 		</nav>
+		<!--}}}-->
+		<!-- Main content {{{-->
+		<div class="main">
+			<!-- Image slider {{{-->
+			<div class="image-slider">
+				<ul>
+					<li><img src="images/biglorem.png" alt="lorem"></li>
+					<li><img src="images/biglorem.png" alt="lorem"></li>
+					<li><img src="images/biglorem.png" alt="lorem"></li>
+					<li><img src="images/biglorem.png" alt="lorem"></li>
+				</ul>
+				<div class="slider-controls">
+					<a class="slider-control-next" href="#">&gt;</a>
+					<a class="slider-control-prev" href="#">&lt;</a>
+				</div>
+			</div>
+			<!--}}}-->
+		</div>
+		<!--}}}-->
 
 		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -89,18 +111,47 @@
 		<script>
 			$(document).ready(function() {
 				$("nav > ul > li .submenu-title, nav > ul > li .submenu").hover(function() {
-					$("body > :not(nav)").addClass("faded");
+					$("body > :not(nav):not(script)").addClass("faded");
 				});
 
 				$("nav > ul > li .submenu-title, nav > ul > li .submenu").mouseleave(function() {
-					$("body > :not(nav)").removeClass("faded");
+					$("body > :not(nav):not(script)").removeClass("faded");
 				});
 
 				$("nav .submenu-imgs").mouseleave(function() {
 					$(this).children().removeClass("faded");
 				});
+
+				window.sliderFrame = 0;
+
+				$(".slider-control-next").click(function() {
+					++window.sliderFrame;
+					window.sliderFrame %= 4;
+					changeSliderFrame();
+					return false;
+				});
+
+				$(".slider-control-prev").click(function() {
+					--window.sliderFrame;
+					window.sliderFrame = (window.sliderFrame < 0) ?
+						window.sliderFrame + 4 : window.sliderFrame;
+					changeSliderFrame();
+					return false;
+				});
+
+				function changeSliderFrame() {
+					// transform: translateX(-i*20%);
+					$(".image-slider>ul").css({
+						"transform": "translateX(-" + window.sliderFrame * 20 + "%)"
+					});
+				}
+
 			});
 		</script>
 
 	</body>
 </html>
+
+<!--
+vim:fdm=marker
+-->

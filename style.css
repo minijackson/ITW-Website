@@ -13,3 +13,21 @@ a {
 a:hover {
 	color: #B59236;
 }
+
+/* Z-Indexes {{{*/
+
+header {
+	position: relative;
+	z-index: 3;
+}
+
+nav {
+	position: relative;
+	z-index: 2;
+}
+
+/*}}}*/
+
+/*
+vim:fdm=marker
+*/
