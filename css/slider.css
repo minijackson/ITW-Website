@@ -2,10 +2,11 @@
 .image-slider {
 	position: relative;
 	overflow: hidden;
+	height: 500px;
 }
 
 .image-slider > ul {
-	height: 100%;
+	height: 90%;
 	width: 500%;
 	white-space: nowrap;
 	transform: translateX(0%);
@@ -16,6 +17,7 @@
 
 .image-slider > ul > li {
 	display: block;
+	height: 100%;
 	float: left;
 	width: 20%;
 	transform: translateZ(0);
@@ -24,29 +26,88 @@
 
 .image-slider > ul > li > img {
 	display: block;
+	height: 100%;
 	text-align: center;
 	max-width: 100%;
 	margin: 0 auto;
 }
 /*}}}*/
 /* Controls {{{*/
-.slider-controls > a {
-	position: absolute;
-	top: 50%;
-	font-size: 5em;
-	background: white;
-	color: black;
-	font-weight: bold;
-	outline: none;
-}
+	/* Arrows {{{*/
+	.slider-arrows-controls > a {
+		position: absolute;
+		top: 50%;
+		font-size: 5em;
+		background: white;
+		color: black;
+		font-weight: bold;
+		outline: none;
+		transition: font-size .3s, color .3s;
+		-webkit-transition: font-size .3s, color .3s;
+	}
 
-.slider-controls .slider-control-next {
-	right: 0;
-}
+	.slider-arrows-controls > a:hover {
+		font-size: 8em;
+	}
 
-.slider-controls .slider-control-prev {
-	left: 0;
-}
+	.slider-arrows-controls .slider-control-next {
+		right: 0;
+	}
+
+	.slider-arrows-controls .slider-control-prev {
+		left: 0;
+	}
+	/*}}}*/
+	/* Dots {{{*/
+	.slider-dots-controls {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		font-size: 2.5em;
+		text-align: center;
+	}
+
+	.slider-dots-controls > ul > li {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		position: relative;
+		border: 2px solid white;
+		border-radius: 50%;
+		cursor: pointer;
+		overflow: hidden;
+		transition: border .3s;
+		-webkit-transition: border .3s;
+	}
+
+	.slider-dots-controls > ul > li > a {
+		display: block;
+		height: 0%;
+		width: 0%;
+		position: absolute;
+		top: 0;
+		background: white;
+		border-radius: 50%;
+		outline: none;
+		transition: height .3s, width .3s, background .3s;
+		-webkit-transition: height .3s, width .3s, background .3s;
+	}
+
+	.slider-dots-controls > ul > li:hover {
+		border-color: #B59236;
+	}
+
+	.slider-dots-controls > ul > li:hover > a {
+		background: #B59236;
+		height: 50%;
+		width: 50%;
+	}
+
+	.slider-dots-controls > ul > li.slider-dot-active > a {
+		height: 80%;
+		width: 80%;
+	}
+	/*}}}*/
 /*}}}*/
 /*
 vim:fdm=marker
