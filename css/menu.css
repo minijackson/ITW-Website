@@ -71,6 +71,7 @@ nav > ul > li .submenu {
 	right: 0;
 	width: 100%;
 	padding: 2em;
+	color: black;
 	transform: translate3d(0, -100%, 0);
 	-webkit-transform: translate3d(0, -100%, 0);
 	transition: background .3s .1s, transform .3s .1s;
