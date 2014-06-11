@@ -25,6 +25,7 @@ body {
 	position: relative;
 	background: #151515;
 	font-size: 11px;
+	color: white;
 }
 
 a {
@@ -35,6 +36,10 @@ a {
 
 a:hover {
 	color: #B59236;
+}
+
+input {
+	color: black;
 }
 
 /* Z-Indexes {{{*/
@@ -50,7 +55,45 @@ nav {
 }
 
 /*}}}*/
+/* Find Banner {{{*/
+.find-banner {
+	width: 100%;
+	height: 8em;
+	margin-top: 3em;
+	padding: 3em;
+	text-align: center;
+	background: #232323;
+	overflow: hidden;
+}
 
+.find-banner > * {
+	display: inline-block;
+}
+
+.find-banner .logo {
+	position: relative;
+	height: 100%;
+	margin-right: 10em;
+}
+
+/* Arrow */
+.find-banner .logo::after {
+	content: "";
+	position: absolute;
+	top: -200%;
+	right: -30%;
+	height: 8em;
+	width: 8em;
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+	transform: rotate(45deg);
+}
+
+.find-banner .description {
+	width: 40em;
+	text-align: left;
+}
+/*}}}*/
 /*
 vim:fdm=marker
 */

@@ -86,12 +86,6 @@ a {
 	color: inherit;
 }
 
-input[type=submit],
-input[type=button],
-button {
-	color: inherit;
-}
-
 *::-moz-selection {
 	background: #B59236;
 	color: #000;
