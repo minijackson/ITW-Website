@@ -58,32 +58,43 @@ nav {
 /* Find Banner {{{*/
 .find-banner {
 	width: 100%;
-	height: 8em;
+	height: 9em;
 	margin-top: 3em;
-	padding: 3em;
 	text-align: center;
 	background: #232323;
 	overflow: hidden;
 }
 
+/* Vertical centering */
+.block::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
 .find-banner > * {
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .find-banner .logo {
-	position: relative;
 	height: 100%;
+	position: relative;
 	margin-right: 10em;
+	padding: 3em 0;
 }
 
 /* Arrow */
 .find-banner .logo::after {
 	content: "";
 	position: absolute;
-	top: -200%;
-	right: -30%;
-	height: 8em;
-	width: 8em;
+	top: 0;
+	right: -50%;
+	display: inline-block;
+	height: 9em;
+	width: 9em;
+	vertical-align: middle;
 	border-top: 1px solid white;
 	border-right: 1px solid white;
 	transform: rotate(45deg);
