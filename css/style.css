@@ -23,9 +23,8 @@
 
 body {
 	position: relative;
-	width: 980px;
-	margin: auto;
 	background: #151515;
+	font-size: 11px;
 }
 
 a {
