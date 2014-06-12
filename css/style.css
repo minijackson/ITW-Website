@@ -42,6 +42,31 @@ input {
 	color: black;
 }
 
+input[type=submit],
+input[type=button],
+button {
+	padding: .5em;
+	color: white;
+	font-weight: bold;
+	background: #B59236;
+	box-shadow: 0 -10px 20px rgba(0,0,0,0.6) inset;
+	border: none;
+	position: relative;
+	transition: box-shadow .3s;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover {
+	box-shadow: 0 -5px 10px rgba(0,0,0,0.6) inset;
+}
+
+input[type=submit]:active,
+input[type=button]:active,
+button:active {
+	box-shadow: 0 1px 10px rgba(0,0,0,0.6) inset;
+}
+
 /* Z-Indexes {{{*/
 
 header {
@@ -106,7 +131,6 @@ nav {
 }
 
 .find-banner form input[type=search] {
-	position: relative;
 	padding: .5em;
 	border: 3px solid grey;
 }
