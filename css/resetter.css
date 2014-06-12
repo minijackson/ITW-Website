@@ -82,6 +82,14 @@ table {
 	font-weight: 300;
 }
 
+@font-face {
+	font-family: ionicons;
+	src: url("fonts/ionicons.eot?v=1.4.1#iefix") format("embedded-opentype"),
+		 url("fonts/ionicons.svg?v=1.4.1") format("svg"),
+		 url("fonts/ionicons.ttf?v=1.4.1") format("truetype"),
+		 url("fonts/ionicons.otf?v=1.4.1") format("opentype");
+}
+
 a {
 	color: inherit;
 }

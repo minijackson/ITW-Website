@@ -104,6 +104,12 @@ nav {
 	width: 40em;
 	text-align: left;
 }
+
+.find-banner form input[type=search] {
+	position: relative;
+	padding: .5em;
+	border: 3px solid grey;
+}
 /*}}}*/
 /*
 vim:fdm=marker
