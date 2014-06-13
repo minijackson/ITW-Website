@@ -1,0 +1,29 @@
+footer {
+	text-align: center;
+	margin: 5em 0 0 0;
+	padding: 6em 0;
+	background: #232323;
+	box-shadow: 0 0 20px black;
+}
+
+footer > ul > li {
+	display: inline-block;
+	margin: 0 .6em;
+}
+
+footer > ul.eula a {
+	color: #666;
+}
+
+footer > ul.eula a:hover {
+	color: #B59236;
+}
+
+footer .social_share_privacy_area {
+	color: black;
+}
+
+footer .social_share_privacy_area li {
+	float: none;
+	display: inline-block;
+}
