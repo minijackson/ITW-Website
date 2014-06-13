@@ -91,19 +91,19 @@ header .login-form a:hover {
 header .login-form a::before,
 nav .submenu-imgs li .caption::before {
 	/* Arrow */
-    content: "";
-    display: block;
-    position: absolute;
-    top: .25em;
+	content: "";
+	display: block;
+	position: absolute;
+	top: .25em;
 	left: .25em;
 	border: solid;
-    border-color: white transparent;
-    border-width: 0 .4em .4em .4em;
+	border-color: white transparent;
+	border-width: 0 .4em .4em .4em;
 	transform: rotate(90deg);
 	-webkit-transform: rotate(90deg);
 	transition: border .2s;
 	-webkit-transition: border .2s;
-    z-index: 99;
+	z-index: 99;
 }
 
 header .login-form a:hover::before {
