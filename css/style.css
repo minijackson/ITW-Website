@@ -207,14 +207,16 @@ nav {
 	display: block;
 	height: 0;
 	font-size: 1.5em;
-	transition: height .5s, padding .5s;
-	-webkit-transition: height .5s, padding .5s;
+	color: white;
+	transition: height .5s, padding .5s, color .5s;
+	-webkit-transition: height .5s, padding .5s, color .5s;
 	overflow: hidden;
 }
 
 .accordeon li:hover p {
 	height: 20em;
 	padding: 3em;
+	color: black;
 }
 /*}}}*/
 /*
