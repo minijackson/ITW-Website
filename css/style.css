@@ -177,6 +177,46 @@ nav {
 	}
 	/*}}}*/
 /*}}}*/
+/* Accordeons {{{*/
+.image-slider.short {
+	display: inline-block;
+	width: 70%;
+}
+
+.accordeon {
+	display: inline-block;
+	padding: 2em;
+	width: 29%;
+	vertical-align: top;
+}
+
+.accordeon li {
+	height: 100%;
+	padding: 2em;
+	font-family: Dual;
+	color: black;
+	background: white;
+}
+
+.accordeon li h1 {
+	display: block;
+	font-size: 3em;
+}
+
+.accordeon li p {
+	display: block;
+	height: 0;
+	font-size: 1.5em;
+	transition: height .5s, padding .5s;
+	-webkit-transition: height .5s, padding .5s;
+	overflow: hidden;
+}
+
+.accordeon li:hover p {
+	height: 20em;
+	padding: 3em;
+}
+/*}}}*/
 /*
 vim:fdm=marker
 */
