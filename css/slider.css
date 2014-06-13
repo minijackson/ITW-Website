@@ -150,7 +150,7 @@
 		width: 100%;
 	}
 	/*}}}*/
-
+	/* Captions {{{*/
 	.products-slider > ul > li > .img-slide > .caption {
 		width: 100%;
 		position: absolute;
@@ -169,7 +169,7 @@
 		transform: translate3d(0, 0, 0);
 		-webkit-transform: translate3d(0, 0, 0);
 	}
-
+	/*}}}*/
 /*}}}*/
 /*
 vim:fdm=marker

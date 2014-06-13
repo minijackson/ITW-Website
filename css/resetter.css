@@ -52,6 +52,7 @@ table {
 
 /* ============================================== */
 
+/* Personnal resetter {{{*/
 @font-face {
 	font-family: Dual;
 	src: url("fonts/Dual-300.ttf") format("truetype"),
@@ -80,3 +81,7 @@ a {
 	background: #B59236;
 	color: #000;
 }
+/*}}}*/
+/*
+vim:fdm=marker 
+*/
