@@ -104,8 +104,8 @@ nav .submenu-imgs li {
 
 nav .submenu-imgs li .caption,
 nav .submenu-imgs li img {
-	transition: transform .3s;
-	-webkit-transition: -webkit-transform .3s;
+	transition: transform .3s, color .3s;
+	-webkit-transition: -webkit-transform .3s, color .3s;
 }
 
 nav .submenu-imgs li img {
@@ -127,14 +127,23 @@ nav .submenu-imgs li .caption {
 	color: white;
 	background: #444;
 	bottom: 0;
+	left: 0;
 	padding: 1em;
 	transform: translate3d(0, 100%, 0);
 	-webkit-transform: translate3d(0, 100%, 0);
 }
 
+nav .submenu-imgs li .caption:hover {
+	color: #B59236;
+}
+
 nav .submenu-imgs li .caption::before {
 	top: 40%;
 	left: 10px;
+}
+
+nav .submenu-imgs li .caption:hover::before {
+	border-color: #B59236 transparent;
 }
 
 nav .submenu-imgs li:hover .caption {
