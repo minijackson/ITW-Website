@@ -62,7 +62,22 @@ nav > ul > li .submenu:hover {
 	transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
 }
+	/* Submenu links {{{*/
+	nav > ul > li .submenu > .submenu-links {
+		margin: 3em 0;
+	}
 
+	nav > ul > li .submenu > .submenu-links > li {
+		display: inline-block;
+		margin: 0 3em;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	nav > ul > li .submenu > .submenu-links a:not(:hover) {
+		color: black;
+	}
+	/*}}}*/
 /*}}}*/
 /* Effects {{{*/
 
@@ -161,7 +176,7 @@ nav .submenu-imgs:hover li {
 
 /*}}}*/
 
-nav > ul > li > .submenu > :not(.submenu-imgs) {
+nav > ul > li > .submenu > :not(.submenu-imgs):not(.submenu-links) {
 	max-width: 700px;
 	margin: auto;
 	text-align: justify;
