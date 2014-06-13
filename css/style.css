@@ -112,6 +112,71 @@ nav {
 	border: 3px solid grey;
 }
 /*}}}*/
+/* Voyages {{{*/
+	/* Sections {{{*/
+	section {
+		margin: 10em 0;
+		background: #232323;
+		padding: 5em;
+		box-shadow: 0 0 20px black;
+	}
+
+	section:nth-child(2n) {
+		background: #333333;
+	}
+
+	section > * {
+		max-width: 1000px;
+		margin: auto;
+	}
+
+	section h1 {
+		font-size: 3em;
+		margin-bottom: 2em;
+	}
+
+	section p {
+		font-size: 1.2em;
+		margin-bottom: 1em;
+	}
+	/*}}}*/
+	/* Price tables {{{*/
+	section .price-tables {
+		text-align: center;
+	}
+
+	section table.price-table {
+		display: inline-block;
+		margin: 0 2em;
+		border: 2em solid white;
+		background: white;
+		color: black;
+		text-align: center;
+	}
+
+	section table.price-table tr:first-child th {
+		font-size: 2em;
+		background: white;
+	}
+
+	section table.price-table tr:nth-child(2n) {
+		background: rgb(234, 135, 63);
+	}
+
+	section table.price-table tr:nth-child(2n+1) {
+		background: rgb(236, 205, 159);
+	}
+
+	section table.price-table tr th {
+		font-size: 1.5em;
+	}
+
+	section table.price-table tr td,
+	section table.price-table tr th {
+		padding: .5em;
+	}
+	/*}}}*/
+/*}}}*/
 /*
 vim:fdm=marker
 */
